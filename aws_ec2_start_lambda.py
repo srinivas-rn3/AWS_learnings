@@ -1,4 +1,4 @@
-#Lambda Function to Strat EC2 Instances:
+#Lambda Function to Strat EC2 Instances run from vs code or nay editor run :
 '''
 import boto3
 
