@@ -8,6 +8,6 @@ def lambda_function(event,context):
     return{
         'statusCode':200,
         'body':{
-            result:result
+            result:result           
         }
     }
