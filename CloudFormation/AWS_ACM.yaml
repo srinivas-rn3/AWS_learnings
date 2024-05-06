@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template to create an ACM certificate
+
+Parameters:
+  DomainName:
+    Type: String
+    Description: Domain name for the certificate
+  ValidationMethod:
+    Type: String
+    Description: Method used to validate the certificate (DNS or EMAIL)
+
+Resources:
+  Certificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Ref DomainName
+      ValidationMethod: !Ref ValidationMethod
+
+Outputs:
+  CertificateArn:
+    Description: ARN of the created ACM certificate
+    Value: !Ref Certificate
